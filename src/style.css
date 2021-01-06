@@ -1,18 +1,15 @@
 body {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background-image: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 0;
-  margin: 0;
-}
+ }
 
-.container {
-  max-width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
+.wrapper {
+  max-width: 650px;
+  margin: 30px auto;
 
+}
 .weather-app {
   background-color: white;
   border-radius: 4px;
@@ -21,7 +18,6 @@ body {
   border: 1px solid #edf0f3;
   padding: 15px;
   margin: 20px auto;
-  max-width: 600px;
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
 }

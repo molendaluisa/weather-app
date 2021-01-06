@@ -7,8 +7,10 @@
   <!-- axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- bootsttap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/79fec93140.js" crossorigin="anonymous"></script>
   <!-- google fonts -->
@@ -21,156 +23,160 @@
 
 <body>
   <div class="container">
-    <div class="weather-app">
-      <div class="row">
-        <div class="col-md-4">
-          <ul>
-            <li><span class="top-time">12:34</span> <span class="top-day">Fri, Dec 30th</span></li>
-            <li id="city">Paris</li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <button class="btn-unit-selector" id="celsius-selector">°C</button> | <button class="btn-unit-selector"
-            id="fahrenheit-selector">°F</button>
-        </div>
-        <div class="col-md-5">
-          <form>
-            <input type="text" placeholder="Enter a city" id="input-city">
-            <button type="submit" class="btn btn-light btn-sm" id="btn-search">
-              <i class="fas fa-search"></i>
+    <div class="wrapper">
+      <div class="weather-app">
+        <div class="row align-items-center">
+          <div class="col-sm-4">
+            <ul>
+              <li><span class="top-time">12:34</span> <span class="top-day">Fri, Dec 30th</span></li>
+              <li id="city">Paris</li>
+            </ul>
+          </div>
+          <div class="col-sm-2">
+            <div class="d-grid gap-2 d-md-block">
+              <button class="btn-unit-selector btn-light btn-sm" id="celsius-selector">°C</button> | <button
+                class="btn-unit-selector btn-light btn-sm" id="fahrenheit-selector">°F</button>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <form>
+              <input type="text" placeholder="Enter a city" id="input-city">
+              <button type="submit" class="btn btn-light btn-sm" id="btn-search">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="col-sm-1 p-0">
+            <button type="submit" class="btn btn-light btn-sm" id="btn-myGeo">
+              <i class="fas fa-location-arrow"></i>
             </button>
-          </form>
-        </div>
-        <div class="col-md-1">
-          <button type="submit" class="btn btn-light btn-sm" id="btn-myGeo">
-            <i class="fas fa-location-arrow"></i>
-          </button>
-        </div>
-      </div>
-      <div class="current-info">
-        <div class="row">
-          <div class="col-sm current-left-side">
-            <div class="col-md-auto current-icon">
-              <i class="fas fa-cloud-showers-heavy" id="current-icon">
-              </i>
-            </div>
-            <div class="col-md-auto current-temp">
-              19
-            </div>
-            <div class="col-md-auto current-unit temp-unit">
-              °C
-            </div>
           </div>
-          <div class="col-sm current-details">
-            <div class="row">
-              <div class="col-4">
-                <span class="high-temp">10</span><span class="temp-unit">°C</span>
+        </div>
+        <div class="current-info">
+          <div class="row">
+            <div class="col-sm current-left-side">
+              <div class="col-md-auto current-icon">
+                <i class="fas fa-cloud-showers-heavy" id="current-icon">
+                </i>
               </div>
-              <div class="col-4">
-                <span class="wind">18</span><span class="wind-unit">m/s</span>
+              <div class="col-md-auto current-temp">
+                19
               </div>
-              <div class="col-4">
-                <span class="sunrise">6:49</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-4 current-label">
-                High
-              </div>
-              <div class="col-4 current-label">
-                Wind
-              </div>
-              <div class="col-4 current-label">
-                Sunrise
+              <div class="col-md-auto current-unit temp-unit">
+                °C
               </div>
             </div>
-            <div class="row">
-              <div class="col-4">
-                <span class="low-temp">-1</span><span class="temp-unit">°C</span>
+            <div class="col-sm current-details">
+              <div class="row">
+                <div class="col-4">
+                  <span class="high-temp">10</span><span class="temp-unit">°C</span>
+                </div>
+                <div class="col-4">
+                  <span class="wind">18</span><span class="wind-unit">m/s</span>
+                </div>
+                <div class="col-4">
+                  <span class="sunrise">6:49</span>
+                </div>
               </div>
-              <div class="col-4">
-                <span class="humidity">10</span><span class="unit">%</span>
+              <div class="row">
+                <div class="col-4 current-label">
+                  High
+                </div>
+                <div class="col-4 current-label">
+                  Wind
+                </div>
+                <div class="col-4 current-label">
+                  Sunrise
+                </div>
               </div>
-              <div class="col-4">
-                <span class="sunset">16:49</span>
+              <div class="row">
+                <div class="col-4">
+                  <span class="low-temp">-1</span><span class="temp-unit">°C</span>
+                </div>
+                <div class="col-4">
+                  <span class="humidity">10</span><span class="unit">%</span>
+                </div>
+                <div class="col-4">
+                  <span class="sunset">16:49</span>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-4 current-label">
-                Low
-              </div>
-              <div class="col-4 current-label">
-                Humidity
-              </div>
-              <div class="col-4 current-label">
-                Sunset
+              <div class="row">
+                <div class="col-4 current-label">
+                  Low
+                </div>
+                <div class="col-4 current-label">
+                  Humidity
+                </div>
+                <div class="col-4 current-label">
+                  Sunset
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="forecast-info">
-        <div class="row">
-          <div class="col">
-            <div class="forecast-day">
-              Sun
+        <div class="forecast-info">
+          <div class="row">
+            <div class="col">
+              <div class="forecast-day">
+                Sun
+              </div>
+              <div class="forecast-icon">
+                <i class="fas fa-cloud-sun-rain"></i>
+              </div>
+              <div class="forecast-temp">
+                8°/5°
+              </div>
             </div>
-            <div class="forecast-icon">
-              <i class="fas fa-cloud-sun-rain"></i>
+            <div class="col">
+              <div class="forecast-day">
+                Mon
+              </div>
+              <div class="forecast-icon">
+                <i class="fas fa-cloud-sun-rain"></i>
+              </div>
+              <div class="forecast-temp">
+                8°/5°
+              </div>
             </div>
-            <div class="forecast-temp">
-              8°/5°
+            <div class="col">
+              <div class="forecast-day">
+                Tue
+              </div>
+              <div class="forecast-icon">
+                <i class="fas fa-cloud-sun-rain"></i>
+              </div>
+              <div class="forecast-temp">
+                8°/5°
+              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="forecast-day">
-              Mon
+            <div class="col">
+              <div class="forecast-day">
+                Wed
+              </div>
+              <div class="forecast-icon">
+                <i class="fas fa-cloud-sun-rain"></i>
+              </div>
+              <div class="forecast-temp">
+                8°/5°
+              </div>
             </div>
-            <div class="forecast-icon">
-              <i class="fas fa-cloud-sun-rain"></i>
-            </div>
-            <div class="forecast-temp">
-              8°/5°
-            </div>
-          </div>
-          <div class="col">
-            <div class="forecast-day">
-              Tue
-            </div>
-            <div class="forecast-icon">
-              <i class="fas fa-cloud-sun-rain"></i>
-            </div>
-            <div class="forecast-temp">
-              8°/5°
-            </div>
-          </div>
-          <div class="col">
-            <div class="forecast-day">
-              Wed
-            </div>
-            <div class="forecast-icon">
-              <i class="fas fa-cloud-sun-rain"></i>
-            </div>
-            <div class="forecast-temp">
-              8°/5°
-            </div>
-          </div>
-          <div class="col">
-            <div class="forecast-day">
-              Thu
-            </div>
-            <div class="forecast-icon">
-              <i class="fas fa-cloud-sun-rain"></i>
-            </div>
-            <div class="forecast-temp">
-              8°/5°
+            <div class="col">
+              <div class="forecast-day">
+                Thu
+              </div>
+              <div class="forecast-icon">
+                <i class="fas fa-cloud-sun-rain"></i>
+              </div>
+              <div class="forecast-temp">
+                8°/5°
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <footer><a href="https://github.com/molendaluisa/weather-app" class="github-link">Open-source code</a> by Luisa
+        Molenda</footer>
     </div>
-    <footer><a href="https://github.com/molendaluisa/weather-app" class="github-link">Open-source code</a> by Luisa
-      Molenda</footer>
   </div>
 
   <script src="src/script.js"></script>
