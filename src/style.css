@@ -22,6 +22,8 @@ body {
   padding: 15px;
   margin: 20px auto;
   max-width: 600px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
 }
 
 ul {
@@ -73,6 +75,7 @@ ul {
   font-weight: 400;
   line-height: 1;
   padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .current-unit {
