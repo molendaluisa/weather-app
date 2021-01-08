@@ -68,11 +68,11 @@ function dateFormat(myDate) {
     }
   }
 
-  let weekDayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let weekDay = weekDayName[myDate.getUTCDay()];
+  const WEEK_DAY_NAME = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let weekDay = WEEK_DAY_NAME[myDate.getUTCDay()];
 
-  let monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  let month = monthName[myDate.getUTCMonth()];
+  const MONTH_NAME = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let month = MONTH_NAME[myDate.getUTCMonth()];
 
   let date = myDate.getUTCDate();
 
@@ -166,8 +166,8 @@ function getForecastInfo(response) {
 
   for (let index = 7; index < 40; index = index + 8) {
     let date = convertEpochToDate(response.data.list[index].dt, response.data.city.timezone);
-    let weekDayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let weekDay = weekDayName[date.getUTCDay()];
+    const WEEK_DAY_NAME = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let weekDay = WEEK_DAY_NAME[date.getUTCDay()];
 
     let max_temp = Math.round(response.data.list[index].main.temp_max);
     
